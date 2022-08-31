@@ -6,14 +6,14 @@ from models.work import Project
 
 
 class Worker(Michael):
-    def __init__(self, current_project: Project = None, **kwargs) --> None:
+    def __init__(self, current_project: Project = None, **kwargs) -> None:
         super().__init__(**kwargs)
         self.current_project = current_project
         
         if self.working or self.bored:
             self.start_work()
 
-    def start_work(self) --> None:
+    def start_work(self) -> None:
         if not self.current_project:
             """
             If I'm not writing some custom systems integration at work,
