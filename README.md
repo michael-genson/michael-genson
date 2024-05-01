@@ -2,7 +2,10 @@ Hey, I'm Michael Genson! 👋
 ---
 ```python
 from models._base import Michael
-from models.work import Project
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from models.work import Project
 
 
 class Worker(Michael):
